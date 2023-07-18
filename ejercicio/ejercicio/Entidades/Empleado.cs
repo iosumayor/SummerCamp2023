@@ -18,7 +18,9 @@
         {
             this._nivel = nivel;
         }
-
+        /// pequeño cambio 1
+        
+ 
         public Empleado()
         {
 

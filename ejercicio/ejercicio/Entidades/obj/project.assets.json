@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SummerCamp\\ejercicio\\ejercicio\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\SummerCamp2023\\ejercicio\\ejercicio\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\SummerCamp\\ejercicio\\ejercicio\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\SummerCamp2023\\ejercicio\\ejercicio\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\pmpcurso1\\.nuget\\packages\\",
-      "outputPath": "C:\\SummerCamp\\ejercicio\\ejercicio\\Entidades\\obj\\",
+      "outputPath": "C:\\SummerCamp2023\\ejercicio\\ejercicio\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
