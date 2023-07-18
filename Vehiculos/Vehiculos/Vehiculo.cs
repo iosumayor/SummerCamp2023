@@ -5,7 +5,7 @@ namespace Vehiculos
     {
         DateTime P = DateTime.Now;
         int x;
-        int pepe;
+        int AumentoAntiguedad;
         //public enum Etiquetaeco
         //{
         //    sinetiqueta, etiquetaB,etiquetaC,etiquetaECO,etiquetaCERO
@@ -31,8 +31,8 @@ namespace Vehiculos
         internal void CalcularAntiguedad()
         {
             var x = DateTime.Now.Year - antiguedad;
-            double pepe = valorbase+( x * 0.01);
-            Console.WriteLine(pepe);
+            double aumentoAntiguedad = valorbase+( x * 0.01);
+            Console.WriteLine(aumentoAntiguedad);
         }
         
         internal void CalcularEtiqueta()
