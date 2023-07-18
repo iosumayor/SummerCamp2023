@@ -4,6 +4,9 @@ namespace ejercicio
 {
     //Calcular el salario empleados
     internal class Program
+
+
+        ///hola
     {
         static void Main(string[] args)
         {
