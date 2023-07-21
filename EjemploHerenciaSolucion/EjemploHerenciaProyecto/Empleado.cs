@@ -13,12 +13,12 @@ namespace EjemploHerenciaProyecto
             set;
             
         }
-
         
 
         public Empleado(string Nombre)
         {
             this.Nombre = Nombre;
+           
         }
 
         public Empleado()///clase vacia para poder inicializar
@@ -29,10 +29,18 @@ namespace EjemploHerenciaProyecto
 
         protected double diasVacaciones;
 
+        public virtual void CalculoVacaciones()
+        {
+            diasVacaciones += 10;
+        }
+
+
+       
+
 
         public override string ToString()
         {
-            return $"[Empleado. Nombre: {Nombre} ]";
+            return $"[Empleado. Nombre: {Nombre}] Dias de vacaciones : {diasVacaciones} ";
         }
     }
 

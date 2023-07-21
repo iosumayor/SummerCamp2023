@@ -11,7 +11,8 @@ namespace EjemploHerenciaProyecto
 
         public string? Telefono { get; set; }
 
-        public Empleado Jefe {  get; set; } 
+        public Empleado Jefe {  get; set; }
 
+        
     }
 }
