@@ -70,7 +70,7 @@ namespace EjemploHerenciaProyecto
             {
                 if (pedro.TienePlazaParking())
                 {
-                    Console.WriteLine(" Pedro " + maria.PlazaParking());
+                    Console.WriteLine(" Pedro " + pedro.PlazaParking());
                 }
             }
 
@@ -89,7 +89,7 @@ namespace EjemploHerenciaProyecto
 
 
             Console.WriteLine(juan);
-            ///Console.WriteLine(maria);
+            Console.WriteLine(maria);
             ///Console.WriteLine(Jose);
             ///Console.WriteLine(pedro);
             ///Console.WriteLine(luis.ToString());

@@ -52,7 +52,13 @@ namespace EjemploHerenciaProyecto
 
         public override string ToString()
         {
-            return $"[Administrador .Nombre: {Nombre} y tiene parking:  {TieneParking} ] ";
+            
+            
+                return $"[Administrador .Nombre: {Nombre} y tiene plaza parking: {TieneParking} ";
+            
+            
+            
+                
+            }
         }
     }
-}
