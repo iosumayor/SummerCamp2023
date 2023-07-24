@@ -9,16 +9,19 @@ namespace EjemploHerenciaProyecto
     public class Externo : Empleado
     {
 
-        private Empresa empresa;
+        
         public Externo(string nombre, Empresa empresa) : base(nombre)
         {
-            this.empresa = empresa;
+            
+            
+            Empresa = empresa;
         }
 
+        public Empresa Empresa { get; }
 
         public override string ToString()
         {
-            return $"[Trabajador .Nombre : {Nombre}  y trabaja en : {empresa.ToString()}]";
+            return $"[Trabajador .Nombre : {Nombre}  y trabaja en : {Empresa?.Nombre.ToString()}]";
         }
 
     }

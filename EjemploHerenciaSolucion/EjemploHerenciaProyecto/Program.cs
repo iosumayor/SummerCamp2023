@@ -41,7 +41,7 @@ namespace EjemploHerenciaProyecto
 
                 if (empleado.Nombre.StartsWith("J"))
                 {
-                    Console.WriteLine(empleado.Nombre);
+                    //Console.WriteLine(empleado.Nombre);
                     ///empleado.CalculoVacaciones;
                     
                 }
@@ -52,7 +52,54 @@ namespace EjemploHerenciaProyecto
             }
 
 
-            try
+            foreach (var empleado in lista) 
+            {
+                var tipo = empleado.GetType().Name;
+
+                //Console.Write("Introduce el tipo de empleado ");
+                //tipo = Console.ReadLine();
+
+                switch (tipo)
+                {
+
+                    case "Trabajador":
+                        //TODO : Mostrar turno
+                        var trabajador = (Trabajador) empleado;
+                        Console.WriteLine("El trabajador " + trabajador.Nombre + " tiene un turno de " +trabajador.Turno);
+                        break;
+                    case "Administrador":
+                        //TODO :Mostrar plaza de parking
+
+                        var administrador = (Administrador)empleado;
+                        try
+                        {
+                            if (administrador.TienePlazaParking())
+                            {
+                                Console.WriteLine(administrador.PlazaParking());
+                            }
+                        }
+
+                        catch (ErrorBaseDatosExcepcion ex)
+                        {
+                            Console.WriteLine(ex.mensaje + " " + ex.fechaHoraExcepcion);
+                        }
+                        /*if (administrador.TienePlazaParking())
+                        {
+                            Console.WriteLine(administrador.TieneParking);
+                        }*/
+                        break;
+                    case "Externo":
+                        var externo = (Externo)empleado;
+                        Console.WriteLine("El empleado " +externo.Nombre + " trabaja en " +externo.Empresa?.Nombre);///se pone interrogante por si es nulo y tiene que pasar
+                        //TODO : Mostrar nombre de empresa
+                        break;
+                }
+                ///empleado.CalculoVacaciones();
+            
+            }
+
+
+            /*try
             {
                 if (maria.TienePlazaParking())
                 {
@@ -77,7 +124,7 @@ namespace EjemploHerenciaProyecto
             catch (ErrorBaseDatosExcepcion ex)
             {
                 Console.WriteLine(ex.mensaje + " " + ex.fechaHoraExcepcion);
-            }
+            }*/
 
 
 
@@ -88,8 +135,8 @@ namespace EjemploHerenciaProyecto
 
 
 
-            Console.WriteLine(juan);
-            Console.WriteLine(maria);
+            ///Console.WriteLine(juan);
+            ///Console.WriteLine(maria);
             ///Console.WriteLine(Jose);
             ///Console.WriteLine(pedro);
             ///Console.WriteLine(luis.ToString());

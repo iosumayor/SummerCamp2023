@@ -26,11 +26,11 @@ namespace EjemploHerenciaProyecto
         {
             if (TieneParking)
             {
-                Console.WriteLine("El administrador tiene plaza parking.");
+                Console.WriteLine(Nombre + "  administrador tiene plaza parking.");
             }
             else
             {
-                Console.WriteLine("El administrador no dispone de plaza parking");
+                Console.WriteLine(Nombre + "  administrador no dispone de plaza parking");
             }
             return TieneParking;
         }
