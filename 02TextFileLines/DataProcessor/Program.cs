@@ -16,6 +16,7 @@ namespace DataProcessor
         private static MemoryCache FilesToProcess = MemoryCache.Default;
 
         static void Main(string[] args)
+            ///a
         {
             WriteLine("Parsing command line options");
 

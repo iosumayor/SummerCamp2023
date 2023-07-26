@@ -24,9 +24,10 @@ namespace DataProcessor
             //File.WriteAllText(OutputFilePath, processedText);
 
             // Using read all lines
-            string[] lines = File.ReadAllLines(InputFilePath);
-            lines[1] = lines[1].ToUpperInvariant(); // Assumes there is a line 2 in the file
-            File.WriteAllLines(OutputFilePath, lines);///a
+            string originalText = File.ReadAllText(InputFilePath);
+            string processedText = originalText.ToUpperInvariant();
+            ///lines[1] = lines[1].ToUpperInvariant(); // Assumes there is a line 2 in the file
+            File.WriteAllText(OutputFilePath, processedText);///a
 
         }
     }
