@@ -8,7 +8,10 @@ namespace EjemploDelegados.Medios
 {
     public class Tocadiscos
     {
-
+        //a
+        
+        
+        
         
 
         public bool ProbarVinilo()
