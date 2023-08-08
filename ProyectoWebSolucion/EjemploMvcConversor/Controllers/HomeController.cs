@@ -8,37 +8,28 @@ namespace EjemploMvcConversor.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IServicioMonedas servicioMonedas;
-        private readonly IMail mail;
+        private readonly IRepositorioMonedas repositorioMonedas;
 
-        public HomeController(ILogger<HomeController> logger, IServicioMonedas servicioMonedas,IMail mail)
+        public HomeController(ILogger<HomeController> logger, IRepositorioMonedas repositorioMonedas)
         {
             _logger = logger;
-            this.servicioMonedas = servicioMonedas;
-            this.mail = mail;
+            this.repositorioMonedas = repositorioMonedas;
         }
 
         public IActionResult Index()
         {
 
             _logger.LogInformation("Estoy en el index");
-            //var serviciomonedas = new ServicioMonedas();
-            //var serviciomonedas = new ServicioCriptoMonedas();
-            //IServicioMonedas serviciomonedas = new ServicioCriptoMonedas();
-            var lista = this.servicioMonedas.ObtenerMonedas();
+            IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
 
-            return View();
+
+            return View(lista);
         }
 
         public IActionResult Privacy()
         {
 
-            //var serviciomonedas = new ServicioMonedas();
-            //var serviciomonedas = new ServicioCriptoMonedas();
-            //IServicioMonedas serviciomonedas = new ServicioCriptoMonedas();
-            ViewBag.lista = this.servicioMonedas.ObtenerMonedas();
             
-            ViewBag.correo = this.mail.EnvioMail("pepe", "luis");
             
 
             
