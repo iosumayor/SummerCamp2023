@@ -2,10 +2,16 @@
 
 namespace EjemploMvcConversor.Servicios
 {
-    public class ServiciosMonedas : IServicioMonedas
+    public class ServicioMonedas : IServicioMonedas
     {
-        
+        private readonly ILogger<ServicioMonedas> logger;
+
+        public ServicioMonedas(ILogger<ServicioMonedas> logger)
+        {
+            this.logger = logger;
+        }
         public List<Moneda> Monedas { get; set; }
+
 
         public List<Moneda> ObtenerMonedas()
         {
@@ -13,3 +19,4 @@ namespace EjemploMvcConversor.Servicios
         }
     }
 }
+
