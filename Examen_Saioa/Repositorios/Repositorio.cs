@@ -21,5 +21,14 @@ namespace Repositorios
             var personas = await db.Persona.ToListAsync();
             return personas.Where(p => p.FechaNacimiento.GetCurrentAge() > 21).OrderBy(p => p.Nombre).Take(10).ToList();
         }
+
+        public async Task RegistrarPersona(Persona persona)
+        {
+
+            db.Persona.Add(persona);
+            await db.SaveChangesAsync();
+
+        }
+
     }
 }

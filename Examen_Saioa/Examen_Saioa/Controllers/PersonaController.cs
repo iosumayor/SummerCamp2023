@@ -28,8 +28,24 @@ namespace Examen_Saioa.Controllers
                 return Ok(mapper.Map<List<PersonaDTO>>(PersonasFromRepo));
 
             }
-        
 
+
+
+        [HttpPost("registro")]
+        public async Task<ActionResult> Register([FromBody] PersonaCrearDTO parametros)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var PersonaRepo = mapper.Map<Persona>(parametros);
+            await repodb.RegistrarPersona(PersonaRepo);
+
+            return Ok();
+
+
+        }
 
 
     }

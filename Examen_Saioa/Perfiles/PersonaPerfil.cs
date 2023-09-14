@@ -13,6 +13,8 @@ namespace Perfiles
             .ForMember(dest => dest.Edad, opt =>
                 opt.MapFrom(src => src.FechaNacimiento.GetCurrentAge()));
 
+            CreateMap<Persona, PersonaCrearDTO>().ReverseMap();
+
         }
         
     }

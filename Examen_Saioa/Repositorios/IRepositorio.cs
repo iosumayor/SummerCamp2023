@@ -12,5 +12,6 @@ namespace Repositorios
     {
 
         Task<IEnumerable<Persona>> GetPersonas();
+        public Task RegistrarPersona(Persona persona);
     }
 }
