@@ -14,7 +14,7 @@ namespace DTOs
         [MaxLength(50)]
         public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "El número de teléfono es obligatorio.")]
+        [Required(ErrorMessage = "El la fecha de macimiento es obligatoria.")]
         public DateTime FechaNacimiento { get; set; }
 
         [MaxLength(25)]

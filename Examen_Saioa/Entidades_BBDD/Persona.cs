@@ -8,8 +8,12 @@ namespace Entidades_BBDD
         public int Id { get; set; }
 
         [MaxLength(50)]
+        [Required(ErrorMessage = "El Nombre de usuario es obligatorio.")]
 
         public string Nombre { get; set; }
+
+
+        [Required(ErrorMessage = "El la fecha de macimiento es obligatoria.")]
 
         public DateTime FechaNacimiento { get; set; }
 
