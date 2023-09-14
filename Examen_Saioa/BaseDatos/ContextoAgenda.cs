@@ -1,6 +1,6 @@
 ﻿namespace BaseDatos
 {
-    public class Class1
+    public class ContextoAgenda :
     {
 
     }

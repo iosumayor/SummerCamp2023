@@ -1,7 +1,21 @@
-﻿namespace Entidades_BBDD
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Entidades_BBDD
 {
-    public class Class1
+    public class Persona
     {
+        [Key]
+        public int Id { get; set; }
+
+        [MaxLength(50)]
+
+        public string Nombre { get; set; }
+
+        public DateTime? FechaNacimiento { get; set; }
+
+        [MaxLength(25)]
+
+        public string Telefono { get; set; }
 
     }
 }
