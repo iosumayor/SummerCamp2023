@@ -1,0 +1,58 @@
+<h1>Personas</h1>
+<br><br>
+<div class="row px-5 ">
+    <div class="col-lg-6">
+        <h3>Registrar usuario</h3>
+        <form [formGroup]="registroFG" (ngSubmit)="registrarPersona()">
+            <div class="">
+                <label class="">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                <p *ngIf="registroFG.get('nombre')?.hasError('required') && registroFG.get('nombre')?.touched"
+                    class="text-danger">Debes completar este campo</p>
+            </div>
+            <div class="mb-4">
+                <label class="">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
+                    formControlName="fechaNacimiento">
+                <p *ngIf="registroFG.get('fechaNacimiento')?.hasError('required') && registroFG.get('fechaNacimiento')?.touched"
+                    class="text-danger">Debes completar este campo</p>
+            </div>
+            <div class="">
+                <label class="">Telefono</label>
+                <input type="text" class="form-control" formControlName="telefono" placeholder="telefono">
+                <p *ngIf="registroFG.get('telefono')?.hasError('required') && registroFG.get('telefono')?.touched"
+                    class="text-danger">Debes completar este campo</p>
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-success" [disabled]="registroFG.invalid">
+                    Crear
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-6">
+        <h3>Lista de usuarios</h3>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">*</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of listPersonas; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.edad}}</td>
+                    <td>{{persona.telefono}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
