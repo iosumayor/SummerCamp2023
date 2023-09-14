@@ -1,21 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Entidades_BBDD
+namespace DTOs
 {
-    public class Persona
+    public class PersonaDTO
     {
-        [Key]
-        public int Id { get; set; }
-
         [MaxLength(50)]
-
         public string Nombre { get; set; }
 
-        public DateTime FechaNacimiento { get; set; }
+        public int Edad { get; set; }
 
         [MaxLength(25)]
-
         public string? Telefono { get; set; }
-
     }
 }
