@@ -32,7 +32,7 @@ export class RegistroListadoComponent implements OnInit, OnDestroy {
       next: (data) => {
         this.listPersonas = data;
       }, error: (error) => {
-        console.log(error);
+        console.log(error.error.titles ?? 'Algo salio mal');
       }
     });
   }
@@ -49,11 +49,17 @@ export class RegistroListadoComponent implements OnInit, OnDestroy {
       next: (data) => {
         console.log('Usuario creado correctamente');
         this.obtenerPersonas();
+        this.resetRegistroFG();
       }, error: (error) => {
         console.log(error.error.titles ?? 'Algo salio mal');
         this.obtenerPersonas();
       }
     });
+    
+  }
+
+  resetRegistroFG(): void {
+    this.registroFG.reset();
   }
 
   ngOnDestroy(): void {
